@@ -6,8 +6,8 @@ interface EmailData {
   templateName:String
   feedBackSeason:String
 }
-console.log(emailSender({coderName:"Sive",email:"sive@gmail.com",subject:"Week 1 feedback", templateName: "notificationToCoder",feedBackSeason:"set1"}))
+emailSender({coderName:"Sive",email:"sive@gmail.com",subject:"Week 1 feedback", templateName: "notificationToCoder",feedBackSeason:"set1"})
 
-function emailSender(emailData:EmailData){
+function emailSender(emailData:EmailData) : String {
   return "Hi " + emailData.coderName;
 }
