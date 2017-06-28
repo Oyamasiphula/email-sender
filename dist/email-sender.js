@@ -2,9 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 // import Module from 'module'
 var fs = require("fs");
-var template = fs.readFileSync('./templates/notification-1.handlebars', 'utf-8');
-console.log(template);
-emailSender({ coderName: "Sive", email: "sive@gmail.com", subject: "Week 1 feedback", templateName: "notificationToCoder", feedBackSeason: "set1" });
+var handlebars = require("handlebars");
+emailSender({ coderName: "Sive", email: "sive@gmail.com", subject: "Week 1 feedback", templateName: "notification-1.handlebars", feedBackSeason: "set1" });
 function emailSender(emailData) {
-    return "Hi " + emailData.coderName;
+    var template = fs.readFileSync('./templates/' + emailData.templateName, 'utf-8');
+    var source = handlebars.compile(template);
+    //  console.log(template)
+    var results = source(emailData);
+    console.log(results);
+    return results;
 }

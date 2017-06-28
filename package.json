@@ -1,0 +1,25 @@
+{
+  "name": "email-sender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/handlebars": "^4.0.33",
+    "handlebars": "^4.0.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oyamasiphula/email-sender.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oyamasiphula/email-sender/issues"
+  },
+  "homepage": "https://github.com/Oyamasiphula/email-sender#readme"
+}
