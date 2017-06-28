@@ -1,4 +1,8 @@
  // import Module from 'module'
+ import * as fs from 'fs'
+
+ let template = fs.readFileSync('./templates/notification-1.handlebars','utf-8')
+ // console.log(template);
 interface EmailData {
   coderName : String
   email:String
