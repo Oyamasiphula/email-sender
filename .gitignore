@@ -1,3 +1,6 @@
+dist/resetPass.js
+enviromentalVibes.md
+src/resetPass.ts
 node_modules/
 src/index.d.ts
 src/nodemailer-test.ts
