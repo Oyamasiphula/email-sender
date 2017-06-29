@@ -25,7 +25,7 @@ transporter = nodemailer.createTransport({
 // setup e-mail data with unicode symbols
 var mailOptions = {
     from: 'Fred Foo ✔ <oyamasiphula@gmail.com>',
-    to: 'onwaba.mrhwetyana@gmail.com',
+    to: 'onwa.mrhwetyana@gmail.com',
     subject: "subject" + 'Hello again✔',
     text: "text" + 'Hello world again ✔',
     html: "html" + '<b>Hello world again✔</b>' // html body
