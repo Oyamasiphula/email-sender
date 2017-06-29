@@ -16,11 +16,6 @@ transporter = nodemailer.createTransport({
         user: process.env.GMUNAME,
         pass: process.env.GMPASS
     }
-}, {
-    from: 'oyamasiphula@gmail.com',
-    headers: {
-        'My-Awesome-Header': 'exmple of a header'
-    }
 });
 // setup e-mail data with unicode symbols
 var mailOptions = {
@@ -35,23 +30,3 @@ transporter.sendMail(mailOptions, function (error, info) {
     console.log(error);
     // nothing
 });
-// // promise send mail without callback
-// transporter
-//   .sendMail(mailOptions)
-//   .then(info => info.messageId)
-// // create template based sender function
-// var sendPwdReset = transporter.templateSender({
-//     subject: 'Password reset for {{username}}!',
-//     text: 'Hello, {{username}}, Please go here to reset your password: {{ reset }}',
-//     html: '<b>Hello, <strong>{{username}}</strong>, Please <a href="{{ reset }}">go here to reset your password</a>: {{ reset }}</p>'
-// }, {
-//     from: 'sender@example.com',
-// });
-// // use template based sender to send a message
-// sendPwdReset({
-//     to: 'receiver@example.com'
-// }, {
-//     username: 'Node Mailer',
-//     reset: 'https://www.example.com/reset?token=<unique-single-use-token>'
-// })
-// .then(info => info.messageId);
