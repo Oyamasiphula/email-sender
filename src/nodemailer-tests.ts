@@ -5,8 +5,8 @@ import * as nodemailer from 'nodemailer'
 var transporter: nodemailer.Transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'oyamasiphula@gmail.com',
-        pass: 'oysiphula2241'
+        user: process.env.GMUNAME,
+        pass: process.env.GMPASS
     }
 });
 
@@ -14,8 +14,8 @@ var transporter: nodemailer.Transporter = nodemailer.createTransport({
 transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'oyamasiphula@gmail.com',
-        pass: 'oysiphula2241'
+        user: process.env.GMUNAME,
+        pass: process.env.GMPASS
     }
 }, {
     from: 'oyamasiphula@gmail.com',
@@ -35,6 +35,8 @@ var mailOptions: nodemailer.SendMailOptions = {
 
 // send mail with defined transport object
 transporter.sendMail(mailOptions, (error: Error, info: nodemailer.SentMessageInfo): void => {
+
+  console.log(error);
 	// nothing
 });
 

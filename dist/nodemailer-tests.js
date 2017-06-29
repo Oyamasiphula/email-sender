@@ -5,16 +5,16 @@ var nodemailer = require("nodemailer");
 var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'oyamasiphula@gmail.com',
-        pass: 'oysiphula2241'
+        user: process.env.GMUNAME,
+        pass: process.env.GMPASS
     }
 });
 // create reusable transporter object using SMTP transport and set default values for mail options.
 transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'oyamasiphula@gmail.com',
-        pass: 'oysiphula2241'
+        user: process.env.GMUNAME,
+        pass: process.env.GMPASS
     }
 }, {
     from: 'oyamasiphula@gmail.com',
@@ -32,6 +32,7 @@ var mailOptions = {
 };
 // send mail with defined transport object
 transporter.sendMail(mailOptions, function (error, info) {
+    console.log(error);
     // nothing
 });
 // // promise send mail without callback

@@ -11,9 +11,9 @@ interface EmailData {
   templateName:String
   feedBackSeason:String
 }
-emailSender({coderName:"Sive",email:"sive@gmail.com",subject:"Week 1 feedback", templateName: "notification-1.handlebars",feedBackSeason:"set1"})
+createMsg({coderName:"Sive",email:"sive@gmail.com",subject:"Week 1 feedback", templateName: "notification-1.handlebars",feedBackSeason:"set1"})
 
-function emailSender(emailData:EmailData) : String {
+function createMsg(emailData:EmailData) : String {
   let template = fs.readFileSync('./templates/'+ emailData.templateName,'utf-8')
   let source = handlebars.compile(template)
   //  console.log(template)
