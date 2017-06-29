@@ -17,11 +17,6 @@ transporter = nodemailer.createTransport({
         user: process.env.GMUNAME,
         pass: process.env.GMPASS
     }
-}, {
-    from: 'oyamasiphula@gmail.com',
-    headers: {
-        'My-Awesome-Header': 'exmple of a header'
-    }
 });
 
 // setup e-mail data with unicode symbols
